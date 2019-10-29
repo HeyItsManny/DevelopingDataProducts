@@ -1,0 +1,34 @@
+---
+title: "Coursera Creating Data Products Leaflet"
+author: "Manny Ruiz"
+output: html_document
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r getDate, echo = FALSE}
+
+Created_Date <- format(as.Date('2019-10-28'), "%A %B %d %Y")
+
+```
+ 
+## *Created Date:*  
+<h2 style="color: blue;">`r Created_Date`</h2>
+
+
+```{r leafletSetup, echo = FALSE}
+
+library(leaflet)
+
+myIcon <- makeIcon(iconUrl = "programmer.png", iconWidth = 75, iconHeight = 75, iconAnchorX = 55, iconAnchorY = 70)
+my_map <- leaflet () %>% 
+  addTiles() %>% 
+  addMarkers(lat=33.2118,lng=-117.2193, popup="E=mc^2", icon=myIcon)
+
+my_map
+
+```
+
