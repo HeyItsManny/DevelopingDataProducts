@@ -1,0 +1,55 @@
+---
+title: "Coursera Developing Data Products Week 3"
+author: "Manny Ruiz"
+date: "11/3/2019"
+output: ioslides_presentation
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r loadLibraries,message=FALSE}
+
+library(plotly)
+library(ggplot2)
+
+```
+
+```{r getDate, echo = FALSE}
+
+Created_Date <- format(as.Date('2019-11-03'), "%A %B %d %Y")
+
+```
+
+
+## Volcano Surface Map using Ploty
+<font size="2" style="color: blue;"> Created: `r Created_Date`</font>
+
+<font size="2">  Topographic Information on Auckland's Maunga Whau Volcano 
+Maunga Whau (Mt Eden) is one of about 50 volcanos in the Auckland volcanic field. This data set gives topographic information for Maunga Whau on a 10m by 10m grid. </font>
+
+```{r plot3_df, message=FALSE, warning=FALSE}
+# volcano is a numeric matrix that ships with R
+p <- plot_ly(z = ~volcano) %>% add_surface(
+  contours = list(
+    z = list(
+      show=TRUE,
+      usecolormap=TRUE,
+      highlightcolor="#ff0000",
+      project=list(z=TRUE)
+      )
+    )
+  ) %>%
+  layout(
+    scene = list(
+      camera=list(
+        eye = list(x=1.87, y=0.88, z=-0.64)
+        )
+      )
+  )
+
+p
+
+```
