@@ -17,17 +17,19 @@ The applicaiton has the following features:
 
 Application Links
 ========================================================
-- The application code is stored in github at 
-- The application can be found at
+- The application code is stored in github at https://github.com/HeyItsManny/DevelopingDataProducts/tree/gh-pages/Week4/Peer_Graded_Assignment
+- The application render can be found at https://heyitsmanny.shinyapps.io/Peer_Graded_Assignment/
+- This Slide Set is hosted by RPbus at http://rpubs.com/HeyItsManny/DataProducts
 - Logic for the calculation can be found at https://en.wikipedia.org/wiki/Annuity
 
-Montlhy Payment Calculation
+Monthly Payment Calculation
 ========================================================
 In the code example below we take the given parameters:
 
 - APR of 3.5% 
 - Term of 30 years
 - Loan of $200,000
+
 
 
 ```r

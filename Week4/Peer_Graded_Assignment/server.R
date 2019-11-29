@@ -1,6 +1,7 @@
 library(shiny)
 library(ggplot2) 
 library(reshape)
+library(DT)
 
 shinyServer(function(input, output ) {
 
@@ -40,9 +41,7 @@ shinyServer(function(input, output ) {
   
   
   output$amort <- DT::renderDataTable(
-    DT::datatable(amortize(), options = list(searching = FALSE, pageLength = 12, ordering=FALSE), rownames= FALSE)
-    %>% 
-    formatCurrency(2:4, '')
+    DT::datatable(amortize(), options = list(searching = FALSE, pageLength = 12, ordering=FALSE), rownames= FALSE)    %>%     formatCurrency(2:4, '')
   )
 
   

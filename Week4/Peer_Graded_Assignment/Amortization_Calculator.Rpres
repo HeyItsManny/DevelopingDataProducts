@@ -17,11 +17,12 @@ The applicaiton has the following features:
 
 Application Links
 ========================================================
-- The application code is stored in github at 
-- The application can be found at
+- The application code is stored in github at https://github.com/HeyItsManny/DevelopingDataProducts/tree/gh-pages/Week4/Peer_Graded_Assignment
+- The application render can be found at https://heyitsmanny.shinyapps.io/Peer_Graded_Assignment/
+- This Slide Set is hosted by RPbus at http://rpubs.com/HeyItsManny/DataProducts
 - Logic for the calculation can be found at https://en.wikipedia.org/wiki/Annuity
 
-Montlhy Payment Calculation
+Monthly Payment Calculation
 ========================================================
 In the code example below we take the given parameters:
 
@@ -29,7 +30,9 @@ In the code example below we take the given parameters:
 - Term of 30 years
 - Loan of $200,000
 
+
 ```{r}
+
 # calculate monthly rate
 monthly_rate = 3.5 / 100 / 12
 
@@ -38,6 +41,7 @@ r = (1 + monthly_rate) ^ 360 - 1
 payment = 200000 * monthly_rate * (r + 1) / r
 
 payment 
+
 ```
 
 Application Benefits
